@@ -4,10 +4,7 @@
 - We also introduce the first public intent detection and slot filling dataset for Vietnamese.
 - Experimental results on our Vietnamese dataset show that our proposed model significantly outperforms JointBERT+CRF.
 
-<p align="center">	
-<img width="600" alt="model" src="JointModel.png">
-</p>
-
+![model](images/JointModel.png)
 
 Details of our JointIDSF model architecture, dataset construction and experimental results can be found in our [following paper](https://arxiv.org/abs/2104.02021):
 
@@ -22,11 +19,7 @@ Details of our JointIDSF model architecture, dataset construction and experiment
 **Please CITE** our paper whenever our dataset or model implementation is used to help produce published results or incorporated into other software.
 
 ## Dataset
-
-<p align="center">	
-<img width="400" alt="statistic" src="dataset_statistic.png">
-</p>
-
+![statistic](images/dataset_statistic.png)
 > ***By downloading [our dataset](https://github.com/VinAIResearch/JointIDSF/tree/main/data), USER agrees:***
 > * to use the dataset for research or educational purposes only.
 > * to **not** distribute the dataset or part of the dataset in any original or modified form.
@@ -57,8 +50,10 @@ Run the following two bash files to reproduce results presented in our paper:
 ### Inference
 We also provide model checkpoints of JointBERT+CRF and JointIDSF. Please download these checkpoints if you want to make inference on a new text file without training the models from scratch.
 ```
-wget http://public.vinai.io/<model_name>.tar.gz
+wget https://public.vinai.io/<model_name>.tar.gz
 tar -xvf <model_name>.tar.gz
+mkdir <model_name>/4e-5/0.15/100
+mv <model_name>/* <model_name>/4e-5/0.15/100/
 ```
 where model_name in ```JointBERT-CRF_PhoBERTEncoder, JointBERT-CRF_XLM-Rencoder, JointIDSF_PhoBERTencoder, JointIDSF_XLM-Rencoder```.
 
